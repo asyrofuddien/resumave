@@ -49,7 +49,7 @@ export default {
             { name: 'company', label: 'Workplace / Company', placeholder: 'Company Name' },
             { name: 'location', label: 'Location', placeholder: 'City, Country' },
             { name: 'start', label: 'Start Date', type: 'month', placeholder: 'MM/DD/YYYY' },
-            { name: 'end', label: 'End Date', type: 'month', placeholder: 'MM/DD/YYYY' },
+            { name: 'end', label: 'End Date', type: 'month-current', placeholder: 'MM/DD/YYYY' },
             {
                 name: 'description',
                 label: 'Responsibility',

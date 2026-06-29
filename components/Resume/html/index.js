@@ -7,6 +7,12 @@ import ListItem from './ListItem';
 import formatDate from '@/utils/formatDate';
 import { Link, Text, View } from './Renderer';
 
+const ensureProtocol = url => {
+    if (!url) return url;
+    if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('mailto:')) return url;
+    return `https://${url}`;
+};
+
 const Header = ({ data }) => {
     const contactLinks = [
         {
@@ -46,7 +52,7 @@ const Header = ({ data }) => {
                 {contactLinks
                     .filter(obj => obj.value)
                     .map(({ value, name }) => (
-                        <Link key={name} src={value} style={{ color: '#555' }}>
+                        <Link key={name} src={ensureProtocol(value)} style={{ color: '#555' }}>
                             {name}
                         </Link>
                     ))}
