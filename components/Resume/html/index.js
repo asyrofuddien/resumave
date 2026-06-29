@@ -68,7 +68,7 @@ const Education = ({ data }) => (
                 <View style={styles.title_wrapper}>
                     <Text style={styles.title}>{degree}</Text>
                     <Text style={styles.date}>
-                        {formatDate(start)}- {formatDate(end)}
+                        {formatDate(start)} - {formatDate(end)}
                     </Text>
                 </View>
 
